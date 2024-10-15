@@ -1,0 +1,28 @@
+{
+    "task": "drc_routenet",
+    "save_path": "work_dir/congestion_gpdl/",
+    "pretrained": null,
+    "max_iters": 200000,
+    "plot_roc": false,
+    "arg_file": null,
+    "cpu": false,
+    "dataroot": "/mnt/new/lcj-temp/raw_dataset/circuitnet_n28/DRC",
+    "ann_file_train": "./files/train_N28.csv",
+    "ann_file_test": "./files/test_N28.csv",
+    "dataset_type": "DRCDataset",
+    "batch_size": 8,
+    "aug_pipeline": [
+        "Flip"
+    ],
+    "model_type": "RouteNet",
+    "in_channels": 9,
+    "out_channels": 1,
+    "lr": 0.0002,
+    "weight_decay": 0.0001,
+    "loss_type": "MSELoss",
+    "eval_metric": [
+        "NRMS",
+        "SSIM"
+    ],
+    "threshold": 0.1
+}
